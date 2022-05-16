@@ -1,0 +1,6 @@
+error 1:生成的bin文件不是512字节大小
+resolve 1: 将
+    mov ax,3
+    int 0x10  写在初始化 0x7c00 之后
+
+error 2: not regnized in real or vitrual-89086 mode
