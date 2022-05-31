@@ -1,9 +1,9 @@
 %include "boot.inc"
 section loader vstart=LOADER_BASE_ADDR
 
+; bochs 自带断点
+;xchg bx,bx
 
-
-; dw 0x55aa ;魔数：用于判断错误
 ; 打印字符串
 mov si,Loading
 call print

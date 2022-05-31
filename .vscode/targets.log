@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 16 21:01:16 2022
+# Make data base, printed on Thu May 26 10:30:48 2022
 
 # Variables
 
@@ -45,11 +47,11 @@ CURDIR := /home/ryan/Desktop/MY_OS/OS
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"/home/ryan/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/tcf.json","_cacheRoot":"/home/ryan/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"/home/ryan/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"/home/ryan/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"/home/ryan/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/tcf.json","_cacheRoot":"/home/ryan/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"/home/ryan/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/home/ryan/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/share/code/code
 # environment
-JOURNAL_STREAM = 8:49422
+JOURNAL_STREAM = 8:76750
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -69,11 +71,11 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 1717
+MANAGERPID = 2828
 # environment
 CLUTTER_IM_MODULE = fcitx
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-540d65a4-d1b1-4df5-a6db-5e6a9b06b1cc.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-854c5b0e-1a47-403e-b13e-d2f31d0b29a2.sock
 # environment
 LC_NAME = zh_CN.UTF-8
 # environment
@@ -89,7 +91,7 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/MY-Ubuntu:@/tmp/.ICE-unix/1952,unix/MY-Ubuntu:/tmp/.ICE-unix/1952
+SESSION_MANAGER = local/MY-Ubuntu:@/tmp/.ICE-unix/3063,unix/MY-Ubuntu:/tmp/.ICE-unix/3063
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -99,7 +101,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = f48c3a3bcc6e41bf9a959845ed50e8a2
+INVOCATION_ID = b4f5fdd5b97c4e46bd0a984c3327abec
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -109,7 +111,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3002
+GIO_LAUNCHED_DESKTOP_FILE_PID = 16695
 # automatic
 %F = $(notdir $%)
 # environment
@@ -123,7 +125,7 @@ PWD = /home/ryan/Desktop/MY_OS/OS
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1910
+SSH_AGENT_PID = 3021
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -133,7 +135,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/ryan
 # environment
-VSCODE_CODE_CACHE_PATH = /home/ryan/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /home/ryan/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = ryan
 # environment
@@ -187,7 +189,7 @@ OLDPWD = /home/ryan
 # environment
 LANGUAGE = zh_CN:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-736729ae-1.67.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-736729ae-1.67.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -200,6 +202,8 @@ MFLAGS = -pqrR
 GDK_BACKEND = x11
 # environment
 LC_PAPER = zh_CN.UTF-8
+# environment
+NO_AT_BRIDGE = 1
 # environment
 QT_ACCESSIBILITY = 1
 # default
@@ -237,9 +241,9 @@ LC_ADDRESS = zh_CN.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3002
+VSCODE_PID = 16695
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=17/136=12%
+# Load=115/1024=11%, Rehash=0, Collisions=17/137=12%
 
 # Pattern-specific Variable Values
 
@@ -247,9 +251,9 @@ VSCODE_PID = 3002
 
 # Directories
 
-# . (device 2054, inode 2886438): 8 files, no impossibilities.
+# . (device 2054, inode 2886438): 11 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -284,11 +288,9 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 # Not a target:
 GNUmakefile:
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
@@ -302,12 +304,12 @@ make: *** No rule to make target 'all'.  Stop.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 136 B / avg = 8 B
-# current buf: size = 8162 B / used = 136 B / count = 16 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 155 B / avg = 8 B
+# current buf: size = 8162 B / used = 155 B / count = 19 / avg = 8 B
 
-# strcache performance: lookups = 19 / hit rate = 15%
+# strcache performance: lookups = 22 / hit rate = 13%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Mon May 16 21:01:16 2022
+# Load=19/8192=0%, Rehash=0, Collisions=1/22=5%
+# Finished Make data base on Thu May 26 10:30:48 2022
 
  

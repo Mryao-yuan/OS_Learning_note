@@ -221,6 +221,38 @@ Control Block registers（控制）
 - 检测正确性
 - 跳转到 loader 执行
 
+
+实模式下print函数
+
+```s
+mov si,booting  ; 参数 si （打印的字符串）
+call print  ; 调用 print
+print：
+    mov ah，0x0e    ; ah 为0xe al为字符 int 0x10 打印字符
+.next:      ; 逐个打印字符
+.next:
+    mov al,[si]
+    cmp al,0
+    jz .done  ; 字符串没数字时结束
+    int 0x10  ; 调用中断
+    inc si  ; 自增
+    jmp .next
+
+.done :
+  ret ; 字符串
+; 填充打印的字符串
+booting:
+  db "Booting to Os...",10,13,0 ; \n\r《===》10和13(ASCII码)
+```
+
+
+
+- 结果图
+
+通过 MBR 执行到 loader,并且输出字符
+
+![](./img/rd_disk_load.jpg)
+
 <strong>实模式的内存布局</strong>
 
 | 起始地址 | 结束地址 | 大小 | 用途 |
