@@ -1,4 +1,4 @@
-%include "boot.inc"
+%include "src/boot.inc"
 ; 直接操作显卡
 SECTION MBR vstart=0x7c00
 	mov ax,cs
@@ -83,7 +83,7 @@ SECTION MBR vstart=0x7c00
    mov cx,4                    ; 待写入扇区数(loader.bin 超过了512字节)
    call rd_disk_m_16           ; 以下读取程序的起始部分(一个扇区)
    ; 比较跳转的硬盘位置的结束标志
-  ; xchg bx,bx
+
    jmp LOADER_BASE_ADDR        ; 跳转到 0x900 （loader 运行）
 
 
@@ -158,7 +158,7 @@ rd_disk_m_16:
 
 ; 用0填充 当前行到section的地址之间没数据的地方用 0 填充 
 times 510 - ($ -$$) db 0
-; 为什么此次要 -8 从 502减去前面的填充（怀疑是include 了2个字节）
+
 db 0x55,0xaa
 
 ; db 是一种伪操作命令，定义操作数占用的字节数

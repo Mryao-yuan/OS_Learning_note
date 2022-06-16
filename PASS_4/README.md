@@ -52,10 +52,7 @@ eax,esi,ebx,edi,ecx,ebp,edx,esp|eax,esi,ebx,edi,ecx,ebp,edx|1、2、4、8|立即
 |----|----|
 |15～0|15～0|
 
-
 - 在 32 位保护模式下,寻址空间是 4G ,故在平坦模型中,段基地址是 0  选择粒度为 4K 的时候,段界限是 0xFFFFF
-
-
 
 ### 全局描述符
 
@@ -92,11 +89,17 @@ type段常搭配S 段来对描述符类型定义
 
 - X: 1/代码 0/数据 Executable
 - X=1:代码段(可执行)
+
     - C:一致性代码段
+
     - R:是否可读
+
 - X=0:数据段(不可执行)
+
     - E:拓展方向 (0/1:上/下  栈用于下 )
+
     - W:是否可写(1/0:可写/不可写)
+    
 - A: Accessed 是否被 CPU 访问
 
 ### 全局描述符表 GDT(Global Descriptor Table)
@@ -113,6 +116,7 @@ GDT 是16位,表示范围 : $2^{16}=65536$
 
 ```s
 lgdt[gdt_ptr];加载 gdt
+
 sgdt[gdt_ptr];保存 gdt
 ```
 lget:loader gdt
@@ -126,9 +130,13 @@ typedef struct pointer{
 }__attribute__((packed))pointer;
 ```
 
-### 选择子
+### 段选择子
 
 通过选择子来确定段描述符,从而确定特权等级\界限和段的基地址
+
+- 只需要一个代码段
+- 需要一个或者多个数据段 / 栈段
+- 加载到段寄存器中 / 校验特权级
 
 
 ```cpp

@@ -1,0 +1,2 @@
+在新建了 src,build 文件后对文件进行分类,显示无法打开 include 的 boot.inc 文件
+    解决:在include 下的文件加上相对与 makefile 的文件目录

@@ -80,7 +80,7 @@ SECTION MBR vstart=0x7c00
 
    mov eax,LOADER_START_SECTOR ; 起始扇区
    mov bx, LOADER_BASE_ADDR    ; 写入的地址
-   mov cx,1                    ; 待写入扇区数
+   mov cx,4                    ; 待写入扇区数
    call rd_disk_m_16           ; 以下读取程序的起始部分(一个扇区)
    ; 比较跳转的硬盘位置的结束标志
    jmp LOADER_BASE_ADDR        ; 跳转到 0x900 （loader 运行）
